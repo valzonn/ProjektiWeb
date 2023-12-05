@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Centrum Lounge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="#"><img id="logo" src="Centrum Logo.jpg" alt="Foto nuk mund te hapet"></a>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Log In</a>
+        </div>
+    </header>
+
+    <div>
+        <form id="register-form">
+            <label for="">Emri:</label>
+            <input type="text" name="emri" id="emri">
+            <div id="emriError"></div>
+            <label for="">Mbiemri:</label>
+            <input type="text" name="mbiemri" id="mbiemri">
+            <div id="mbiemriError"></div>
+            <label for="">Email:</label>
+            <input type="text" name="email" id="email">
+            <div id="emailError"></div>
+            <label for="">Password:</label>
+            <input type="password" name="password" id="password">
+            <div id="passwordError"></div>
+
+            <button type="button" onclick="validateForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+
+        let emriRegex = /^[a-zA-Z]{2,20}$/;
+        let mbiemriRegex = /^[a-zA-Z]{3,8}$/;
+        let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+        let passwordRegex = /^[a-zA-Z]{3,8}$/;
+
+        function validateForm() {
+
+            let emriInput = document.getElementById('emri');
+            let mbiemriInput = document.getElementById('mbiemri');
+            let emailInput = document.getElementById('email');
+            let passwordInput = document.getElementById('password');
+            let emriError = document.getElementById('emriError');
+            let mbiemriError = document.getElementById('mbiemriError');
+            let emailError = document.getElementById('emailError');
+            let passwordError = document.getElementById('passwordError');
+
+            emriError.innerText = '';
+            mbiemriError.innerText = '';
+            emailError.innerText = '';
+            passwordError.innerText = '';
+
+
+            if (!emriRegex.test(emriInput.value)) {
+                emriError.innerText = 'Emri eshte Invalid';
+                return;
+            }
+
+            if (!mbiemriRegex.test(mbiemriInput.value)) {
+                mbiemriError.innerText = 'Mbiemri eshte Invalid';
+                return;
+            }
+
+            if (!emailRegex.test(emailInput.value)) {
+                emailError.innerText = 'Email eshte Invalid';
+                return;
+            }
+
+            if (!passwordRegex.test(passwordInput.value)) {
+                passwordError.innerText = 'Password eshte Invalid';
+                return;
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

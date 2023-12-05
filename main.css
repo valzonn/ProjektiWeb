@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+}
+
+#header{
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gold;
+}
+
+#header img{
+    max-height: 70px;
+}
+
+div a{
+    margin: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+
+section{
+    background-image: url('Lobby_img.jpg');
+    background-size:100%;
+    background-repeat:no-repeat;
+    padding-bottom: 500px;
+}
+
+.main h1{
+    padding-top: 100px;
+    text-align: center;
+    color: white;
+}
