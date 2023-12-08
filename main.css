@@ -1,20 +1,20 @@
-body{
+body {
     margin: 0;
 }
 
-#header{
+#header {
     padding: 5px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: gold;
+    background-color: #f9b457;
 }
 
-#header img{
+#header img {
     max-height: 70px;
 }
 
-div a{
+div a {
     margin: 10px;
     text-decoration: none;
     text-transform: uppercase;
@@ -22,15 +22,167 @@ div a{
     font-weight: bold;
 }
 
-section{
-    background-image: url('Lobby_img.jpg');
-    background-size:100%;
-    background-repeat:no-repeat;
-    padding-bottom: 500px;
+div a:hover {
+    color: white;
 }
 
-.main h1{
-    padding-top: 100px;
+section {
+    background-image: url('Lobby_img.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+}
+
+article {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main {
+    align-items: center;
+    text-align: center;
+}
+
+.main h1 {
+    padding-top: 50px;
     text-align: center;
     color: white;
+    margin: 0px;
+}
+
+#our_story {
+    padding-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+.main h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+}
+
+.main p {
+    text-align: center;
+    color: white;
+    font-size: 23px;
+}
+
+#slider-main {
+    align-items: center;
+    text-align: center;
+    background-color: #292929;
+}
+
+#slider-main h2 {
+    margin: 0px;
+    padding: 20px;
+    color: white;
+}
+
+#slider {
+    height: 500px;
+    width: 800px;
+}
+
+#next-button {
+    margin: 20px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #f9b457;
+}
+
+#next-button:hover {
+    background-color: #f1bd79;
+}
+
+/* Menu */
+
+#body_menu {
+    background-color: #292929;
+}
+
+#menu_tag {
+    margin: 0px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    padding-top: 0px;
+    padding-bottom: 300px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+section h3 {
+    margin: 0px;
+    text-align: center;
+    color: #f9b457;
+    padding-top: 150px;
+}
+
+.topic {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex-container p {
+    color: white;
+    font-size: 20px;
+    text-align: end;
+}
+
+.flex-container div span {
+    margin-left: 100px;
+}
+
+.euro{
+    color: #f9b457;
+}
+
+hr{
+    width: 50%;
+    height: 3px;
+    border: none;
+    background-color: #f9b457;
+}
+
+/* Register Form */
+
+#register-button {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px;
+    border: none;
+}
+
+#register-button:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+}
+
+#register-form {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 25%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#register-form input {
+    margin: 5px;
+    padding: 2px;
 }

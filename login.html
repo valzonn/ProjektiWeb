@@ -16,7 +16,7 @@
         <a href="#"><img id="logo" src="Centrum Logo.jpg" alt="Foto nuk mund te hapet"></a>
         <div>
             <a href="index.html">Home</a>
-            <a href="aboutus.html">About Us</a>
+            <a href="menu.html">Menu</a>
             <a href="contact.html">Contact</a>
             <a href="login.html">Log In</a>
         </div>
@@ -24,29 +24,28 @@
 
     <div>
         <form id="register-form">
-            <label for="">Emri:</label>
+            <label for="emri">Emri:</label>
             <input type="text" name="emri" id="emri">
-            <div id="emriError"></div>
-            <label for="">Mbiemri:</label>
+            <div class="error" id="emriError"></div>
+            <label for="mbiemri">Mbiemri:</label>
             <input type="text" name="mbiemri" id="mbiemri">
-            <div id="mbiemriError"></div>
-            <label for="">Email:</label>
+            <div class="error" id="mbiemriError"></div>
+            <label for="email">Email:</label>
             <input type="text" name="email" id="email">
-            <div id="emailError"></div>
-            <label for="">Password:</label>
+            <div class="error" id="emailError"></div>
+            <label for="password">Password:</label>
             <input type="password" name="password" id="password">
-            <div id="passwordError"></div>
+            <div class="error" id="passwordError"></div>
 
-            <button type="button" onclick="validateForm()">Submit</button>
+            <button id="register-button" type="button" onclick="validateForm()">Regjistrohu</button>
         </form>
     </div>
 
     <script>
-
-        let emriRegex = /^[a-zA-Z]{2,20}$/;
-        let mbiemriRegex = /^[a-zA-Z]{3,8}$/;
+        let emriRegex = /^[a-zA-Z/s]{2,20}$/;
+        let mbiemriRegex = /^[a-zA-Z/s]{2,20}$/;
         let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-        let passwordRegex = /^[a-zA-Z]{3,8}$/;
+        let passwordRegex = /^[a-zA-Z]{8,20}$/;
 
         function validateForm() {
 
@@ -63,7 +62,6 @@
             mbiemriError.innerText = '';
             emailError.innerText = '';
             passwordError.innerText = '';
-
 
             if (!emriRegex.test(emriInput.value)) {
                 emriError.innerText = 'Emri eshte Invalid';
