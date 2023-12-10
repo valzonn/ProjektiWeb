@@ -15,13 +15,14 @@
     <header id="header">
         <a href="#"><img id="logo" src="Centrum Logo.jpg" alt="Foto nuk mund te hapet"></a>
         <div>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Log In</a>
+            <a class="nav-links" href="index.html">Home</a>
+            <a class="nav-links" href="menu.html">Menu</a>
+            <a class="nav-links" href="contact.html">Contact</a>
+            <a class="nav-links" href="login.html">Log In</a>
         </div>
     </header>
 
+    <div id="forms">
     <div>
         <form id="register-form">
             <label for="emri">Emri:</label>
@@ -40,6 +41,52 @@
             <button id="register-button" type="button" onclick="validateForm()">Regjistrohu</button>
         </form>
     </div>
+
+    <div>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email-login">
+            <div class="error" id="emailError-login"></div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password-login">
+            <div class="error" id="passwordError-login"></div>
+
+            <button id="login-button" type="button" onclick="validateLoginForm()">Log In</button>
+        </form>
+    </div>
+</div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <img id="logo-footer" src="Centrum Logo.jpg" alt="Foto nuk mund te hapet">
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: info@centrumloungebar.com</p>
+                <p>Telefon: +383 49-123-123</p>
+                <p>Adresa: Fehmi Agani, Prishtina</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a class="quick-links" href="index.html">Home</a></li>
+                    <li><a class="quick-links" href="menu.html">Menu</a></li>
+                    <li><a class="quick-links" href="contact.html">Contact</a></li>
+                    <li><a class="quick-links" href="login.html">Log In</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <a href="https://www.facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Centrum Lounge Bar | | All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
         let emriRegex = /^[a-zA-Z/s]{2,20}$/;
@@ -84,6 +131,29 @@
             }
 
         }
+
+        function validateLoginForm() {
+
+            let emailInput = document.getElementById('email-login');
+            let passwordInput = document.getElementById('password-login');
+            let emailError = document.getElementById('emailError-login');
+            let passwordError = document.getElementById('passwordError-login');
+
+            emailError.innerText = '';
+            passwordError.innerText = '';
+
+            if (!emailRegex.test(emailInput.value)) {
+                emailError.innerText = 'Email eshte Invalid';
+                return;
+            }
+
+            if (!passwordRegex.test(passwordInput.value)) {
+                passwordError.innerText = 'Password eshte Invalid';
+                return;
+            }
+
+        }
+
     </script>
 
 </body>

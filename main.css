@@ -14,7 +14,7 @@ body {
     max-height: 70px;
 }
 
-div a {
+.nav-links {
     margin: 10px;
     text-decoration: none;
     text-transform: uppercase;
@@ -22,7 +22,7 @@ div a {
     font-weight: bold;
 }
 
-div a:hover {
+.nav-links:hover {
     color: white;
 }
 
@@ -163,6 +163,8 @@ hr{
     font-weight: 500;
     padding: 8px;
     border: none;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 #register-button:hover {
@@ -177,7 +179,7 @@ hr{
     text-align: center;
     background-color: #f4f4f4;
     padding: 20px;
-    width: 25%;
+    width: 75%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -185,4 +187,159 @@ hr{
 #register-form input {
     margin: 5px;
     padding: 2px;
+}
+
+/* Log In */
+
+#login-button {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#login-button:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+}
+
+#login-form {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 75%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-form input {
+    margin: 5px;
+    padding: 2px;
+}
+
+/* Forms */
+
+#forms{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+    background-color: #292929;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #292929;
+    color: #fff;
+    padding: 30px 0;
+}
+
+#logo-footer{
+    max-height: 80px;
+    padding: 30px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section h2 {
+    color: #f1bd79;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin-bottom: 5px;
+}
+
+.social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.social img{
+    max-width: 30px;
+}
+
+.quick-links{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* Contact Form */
+
+#contact-container {
+    background-color: #292929;
+    padding: 20px;
+    margin: 0px;
+}
+
+#contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact-form h2 {
+    text-align: center;
+    color: white;
+}
+
+.label-form {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-size: 20px;
+}
+
+#contact-form input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#contact-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-button:hover {
+    background-color: #45a049;
 }
