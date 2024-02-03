@@ -29,7 +29,6 @@ body {
 section {
     background-image: url('Lobby_img.jpg');
     background-size: 100%;
-    background-repeat: no-repeat;
     padding-bottom: 20px;
 }
 
@@ -342,4 +341,20 @@ textarea {
 
 #contact-button:hover {
     background-color: #45a049;
+}
+
+.hide{
+    display: none;
+}
+
+#dashboard-link {
+    margin: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+
+#dashboard-link:hover {
+    color: white;
 }
